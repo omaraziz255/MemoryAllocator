@@ -1,6 +1,10 @@
-#include <stdio.h>
+#include <allocator.hpp>
 
 int main() {
-    printf("Hello, World!\n");
+    void* x = malloc(100);
+    void* y = calloc(10, 10);
+    x = realloc(x, 500);
+    free(x);
+    free(y);
     return 0;
 }
